@@ -1,6 +1,11 @@
 <div class="input-form">
+  <label>Enter your first name: </label>
   <input type="text" [(ngModel)]="firstName" placeholder="First Name" name="firstName">
+  <br>
+  <label>Enter your Last name: </label>
   <input type="text" [(ngModel)]="lastName" placeholder="Last Name" name="lastName">
+  <br>
+  <label>Select job type: </label>
   <select [(ngModel)]="employmentTerm" name="employmentTerm">
     <option value="Full-time">Full-time</option>
     <option value="Part-time">Part-time</option>

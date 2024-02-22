@@ -1,0 +1,33 @@
+/* Styles for the output display */
+.output-display {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.output-display p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Optionally, you might want to highlight the labels for clarity */
+.output-display p::before {
+  font-weight: bold;
+}
+
+.output-display p:nth-child(1)::before {
+  content: "First Name: ";
+}
+
+.output-display p:nth-child(2)::before {
+  content: "Last Name: ";
+}
+
+.output-display p:nth-child(3)::before {
+  content: "Employment Term: ";
+}
