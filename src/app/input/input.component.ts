@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {Router} from "express";
+import {DataTransferService} from "../data-transfer.service";
 
 @Component({
   selector: 'app-input',

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataTransferService} from "../data-transfer.service";
 
 @Component({
   selector: 'app-output',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
   templateUrl: './output.component.html',
   styleUrl: './output.component.css'
 })
-export class OutputComponent {
+export class OutputComponent implements OnInit {
+  data: any = {};
 
+  constructor(private dataTransferService: DataTransferService) {
+  }
+
+  ngOnInit() {
+    this.dataTransferService.currentData.subscribe(data => this.data = data);
+  }
 }
