@@ -1,1 +1,11 @@
-<p>input works!</p>
+<div class="input-form">
+  <input type="text" [(ngModel)]="firstName" placeholder="First Name" name="firstName">
+  <input type="text" [(ngModel)]="lastName" placeholder="Last Name" name="lastName">
+  <select [(ngModel)]="employmentTerm" name="employmentTerm">
+    <option value="Full-time">Full-time</option>
+    <option value="Part-time">Part-time</option>
+    <option value="Partial load">Partial load</option>
+    <option value="Sessional">Sessional</option>
+  </select>
+  <button (click)="submit()">Submit</button>
+</div>

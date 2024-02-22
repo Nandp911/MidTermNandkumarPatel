@@ -1,12 +1,30 @@
 import { Component } from '@angular/core';
+import {FormsModule} from "@angular/forms";
+import {Router} from "express";
 
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css'
 })
 export class InputComponent {
+  firstName: string = '';
+  lastName: string = '';
+  employmentTerm: string = 'Full-time';
 
+  constructor(private dataTransferService: DataTransferService, private router: Router) { }
+
+  submit(): void {
+    const teacherData = {
+      firstName: this.firstName,
+      lastName: this.lastName,
+      employmentTerm: this.employmentTerm
+    };
+    this.dataTransferService.updateData(teacherData);
+    this.router.navigate(['/output']);
+  }
 }
